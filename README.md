@@ -1,1 +1,1 @@
-configurations for vim, sublime text, vscode
+## configuration files for vim, sublime text, vscode
