@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"AutoPEP8",
+		"Evernote",
+		"Git",
+		"Markdown Extended",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"Monokai Extended",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"Pylinter",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeREPL",
+		"SublimeTmpl",
+		"Terminal",
+		"Theme - Soda"
+	]
+}

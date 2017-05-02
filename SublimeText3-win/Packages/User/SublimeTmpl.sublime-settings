@@ -1,0 +1,9 @@
+     	{
+"disable_keymap_actions": false, // "all"; "html,css"
+             "date_format" : "%Y-%m-%d %H:%M:%S",
+             "attr": {
+                 "author": "huajh7",
+                 "email": "huajh7@gmail.com",
+                 "link": "http://www.huajh7.com/"                
+             }
+         }

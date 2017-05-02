@@ -1,0 +1,17 @@
+{
+	"anaconda_linting": false,
+  //"python_interpreter": "C:/Anaconda3",
+	"pep8_ignore":
+  [
+    "E501", // Line too long
+    "E309", // Missing blank line after class declaration
+  ],
+  "pep8_max_line_length": 120,
+  "autoformat_ignore":
+  [
+    "E501", // Line too long
+    "E701", // Put colon-separated compound statement on separate lines.
+    "E26",  // Spacing after comment hash
+    "E122", // Add absent indentation for hanging indentation.
+  ]
+}

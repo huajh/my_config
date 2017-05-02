@@ -1,0 +1,170 @@
+set nocompatible  " not compatible with vi
+set backspace=indent,eol,start
+let LANG='en_US.UTF-8'  "set message language  
+set langmenu=en   "set menu's language of gvim. no spaces beside '=' 
+
+
+" let g:C_UseTool_cmake    = 'yes'
+" let g:C_UseTool_doxygen  = 'yes'
+
+
+" let g:molokai_original = 1
+let g:rehash256 = 1
+
+
+filetype off  
+
+" path of Vundle
+set rtp+=~/.vim/bundle/Vundle.vim/  
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim' 
+
+" plugin on GitHub repo
+" Plugin  'mattn/emmet-vim'  
+" Plugin  'drmingdrmer/xptemplate' 
+" Plugin  'godlygeek/tabular'
+" Plugin  'plasticboy/vim-markdown'
+" Plugin  'tomasr/molokai'
+" Plugin  'altercation/vim-colors-solarized'
+Plugin  'Valloric/YouCompleteMe'
+Plugin  'vim-syntastic/syntastic'
+Plugin  'vim-airline/vim-airline'
+Plugin  'vim-airline/vim-airline-themes'
+Plugin  'scrooloose/nerdtree'   " A tree explorer plugin for vim.
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin  'majutsushi/tagbar'
+" Plugin  'humiaozuzu/dot-vimrc'
+" Plugin  'elzr/vim-json'
+" Plugin  'mhinz/vim-signify'
+" Plugin  'scrooloose/nerdcommenter'
+Plugin  'tpope/vim-fugitive'
+" Plugin  'tpope/vim-surround'
+Plugin  'flazz/vim-colorschemes'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+syntax enable
+set number
+"Monaco   Consolas
+set guifont=Consolas:h12
+
+" set background=dark
+" colorscheme solarized
+" if has('gui_running')
+"    set background=light
+" else
+"    set background=dark
+" endif
+" let g:solarized_termcolors=256
+
+
+colorscheme molokai
+
+
+" for YouCompleteMe (ycm)
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+let g:ycm_complete_in_comments = 1
+
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+let mapleader='\'
+
+
+" for syntastic
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" For example, Python has the following checkers, among others: 
+" flake8, pyflakes, pylint and a native python checker. 
+" To tell syntastic to use pylint, you would use this setting:
+let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
+
+" vim-airline
+
+" The default setting of 'laststatus' is for the statusline to 
+" not appear until a split is created. If you want it to appear 
+" all the time, add the following to your vimrc: 
+set laststatus=2
+
+"Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1 
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#extensions#tabline#left_alt_sep = ' '
+" let g:airline#extensions#tabbar#flag = 'f' 
+
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
+" molokai, dark, light
+let g:airline_theme = 'molokai'
+
+
+" tpope/vim-fugitive for git 
+
+
+" scrooloose/nerdtree 
+" autocmd vimenter * NERDTree   " open a NERDTree automatically when vim starts up
+" let g:NERDTreeDirArrowExpandable = '+'
+" let g:NERDTreeDirArrowCollapsible = '-'
+
+
+" Xuyuanp/nerdtree-git-plugin
+
+
+" Other settings
+
+"+y    ctr+c 
+"+p    ctr+v 
+"+gp   ctr+v and move cursor to end 
+nmap <c-v> "+gp  
+nmap <c-c> "+y 
+
+" 1 tab= ? space ，default 8
+set tabstop=4
+" number of indent length  
+set shiftwidth=4
+" length of backspace
+set softtabstop=4 
+" expandtab -> space, noexpandtab -> tab
+set expandtab
+
+
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
+

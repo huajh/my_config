@@ -1,0 +1,29 @@
+ // 将设置放入此文件中以覆盖默认设置
+{
+ 
+  "python.pythonPath": "python",
+  // Whether to lint Python files using pylint.
+  "python.linting.pylintEnabled": true,
+  // Whether to lint Python files using pep8
+  "python.linting.pep8Enabled": false,
+  // Whether to lint Python files using flake8
+  "python.linting.flake8Enabled": false,
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.linting.pylintArgs": [],
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.linting.pep8Args": [],
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.linting.flake8Args": [],
+
+  
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "vs-seti",
+  "editor.fontSize": 13,
+    
+  //"ycmd.path": "C:/Users/Administrator/.vim/bundle/YouCompleteMe/third_party/ycmd",
+  //"ycmd.global_extra_config": "C:/Users/Administrator/.ycm_extra_conf.py",
+      "ycmd.path": "/Users/huajh7/.vim/bundle/YouCompleteMe/third_party/ycmd",
+    "ycmd.global_extra_config": "/Users/huajh7/.ycm_extra_conf.py",
+  "C_Cpp.autocomplete": "Disabled",
+  "C_Cpp.clang_format_style": "Visual Studio"
+}
